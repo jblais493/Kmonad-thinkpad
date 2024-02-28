@@ -11,10 +11,10 @@
   ctl_s (tap-hold-next-release 180 s lctl)
   sft_t (tap-hold-next-release 180 t lsft)
 
-  sft_n (tap-hold-next-release 200 n rsft)
-  ctl_e (tap-hold-next-release 200 e rctl)
-  alt_i (tap-hold-next-release 180 i lalt)
-  met_o (tap-hold-next-release 180 o rmet)
+  sft_n (tap-hold-next-release 180 n rsft)
+  ctl_e (tap-hold-next-release 180 e rctl)
+  alt_i (tap-hold-next-release 200 i lalt)
+  met_o (tap-hold-next-release 200 o rmet)
   )
 
 (defsrc

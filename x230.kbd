@@ -1,0 +1,62 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "KMonad kbd"))
+
+(defalias
+  num (tap-next bspc (layer-toggle num))
+  nav (tap-next lsft (layer-toggle nav))
+
+  met_a (tap-hold-next-release 200 a lmet)
+  alt_r (tap-hold-next-release 200 r lalt)
+  ctl_s (tap-hold-next-release 180 s lctl)
+  sft_t (tap-hold-next-release 180 t lsft)
+
+  sft_n (tap-hold-next-release 180 n rsft)
+  ctl_e (tap-hold-next-release 180 e rctl)
+  alt_i (tap-hold-next-release 200 i lalt)
+  met_o (tap-hold-next-release 200 o rmet)
+  )
+
+(defsrc
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -     =        bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]        \ 
+  caps a    s    d    f    g    h    j    k    l    ;    '         ret  
+  lsft z    x    c    v    b    n    m    ,    .    /              rsft
+  wkup lctl lmet lalt           spc            ralt cmps rctl      back up   fwd
+                                                                   left down rght
+)
+
+(deflayer base
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    f    p    b    j    l    u    y    '    [     ]    \
+  @num @met_a    @alt_r    @ctl_s   @sft_t    g    m    @sft_n    @ctl_e    @alt_i    @met_o    ;          ret
+  @nav z    x    c    d    v    k    h    ,    .    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  rctl  back up   fwd
+                                                               left down rght
+)
+
+(deflayer num
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  -    -    -    -    -    -    -    -    -    -    -     =    bspc
+  tab  !    -    {    }    |    +    7    8    9    *    [     ]    \
+  caps -    -    -    -    `    -    4    5    6    :    ;          ret
+  lsft %    ^    [    ]    ~    =    1    2    3    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  rctl  back up   fwd
+                                                               left down rght
+)
+
+(deflayer nav
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  -    -    -    -    -    -    -    -    -    -    -     =    bspc
+  tab  -    -    -    -    -    +    7    8    9    *    [     ]    \
+  caps @met_a    @alt_r    @ctl_s   @sft_t   -    left    down    up    rght    o    ;          ret
+  lsft -    -    -    -    -    =    j    k    3    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  rctl  back up   fwd
+                                                               left down rght
+)

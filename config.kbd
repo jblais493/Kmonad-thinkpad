@@ -40,8 +40,8 @@
 (deflayer num
   -  -   -   -   -    -    -    -    -    -    -    -   -  home end  ins  del
   grv  -    -    -    -    -    -    -    -    -    -    -     =    bspc
-  tab  !    -    {    }    |    +    7    8    9    *    [     ]    \
-  caps -    -    \(   \)    `    -    4    5    6    :    ;          ret
+  tab  !    @    {    }    |    +    7    8    9    *    [     ]    \
+  caps -    $    \(   \)  `    -    4    5    6    :    ;          ret
   lsft %    ^    [    ]    ~    =    1    2    3    /               rsft
   wkup lctl lmet lalt           spc            0 sys  rctl  pgdn up   pgup
                                                                left down rght

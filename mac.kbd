@@ -19,14 +19,17 @@
   nav (tap-next tab (layer-toggle nav))
   ;; Updated modifier mappings for macOS
   ;; Using command (cmd) where you had meta (met)
-  cmd_a (tap-hold-next-release 200 a lcmd)
-  alt_r (tap-hold-next-release 200 r lalt)
-  ctl_s (tap-hold-next-release 180 s lctl)
-  sft_t (tap-hold-next-release 180 t lsft)
-  sft_n (tap-hold-next-release 180 n rsft)
-  ctl_e (tap-hold-next-release 180 e rctl)
-  alt_i (tap-hold-next-release 200 i lalt)
-  cmd_o (tap-hold-next-release 200 o rcmd)
+  ;; Left hand homerow mods
+  opt_a (tap-hold-next-release 200 a lalt)    ; Pinky - Option
+  cmd_r (tap-hold-next-release 200 r lmet)    ; Ring - Command
+  ctl_s (tap-hold-next-release 180 s lctl)    ; Middle - Control
+  sft_t (tap-hold-next-release 180 t lsft)    ; Index - Shift
+
+  ;; Right hand homerow mods (mirroring the left)
+  sft_n (tap-hold-next-release 180 n rsft)    ; Index - Shift
+  ctl_e (tap-hold-next-release 180 e rctl)    ; Middle - Control
+  cmd_i (tap-hold-next-release 200 i rmet)    ; Ring - Command
+  opt_o (tap-hold-next-release 200 o ralt)    ; Pinky - Option
 )
 
 ;; MacBook keyboard source layout
@@ -44,7 +47,7 @@
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    f    p    b    j    l    u    y    '    [    ]    \
-  caps @cmd_a @alt_r @ctl_s @sft_t g    m    @sft_n @ctl_e @alt_i @cmd_o ; ret
+  caps @opt_a @cmd_r @ctl_s @sft_t g    m    @sft_n @ctl_e @cmd_i @opt_o ; ret
   lsft z    x    c    d    v    k    h    ,    .    /    @num  up
   fn   lctl @nav @num           spc            @num ralt left down rght
 )

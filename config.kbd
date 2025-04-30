@@ -31,7 +31,7 @@
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
   grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
   tab  q    w    f    p    b    j    l    u    y    '    [     ]    \
-  caps @met_a    @alt_r    @ctl_s   @sft_t    g    m    @sft_n    @ctl_e    @alt_i    @met_o    ;          ret
+  esc @met_a    @alt_r    @ctl_s   @sft_t    g    m    @sft_n    @ctl_e    @alt_i    @met_o    ;          ret
   lsft z    x    c    d    v    k    h    ,    .    /               @num
   wkup lctl @nav @num           spc            @num sys  rctl  pgdn up   pgup
                                                                left down rght

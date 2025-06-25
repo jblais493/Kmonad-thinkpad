@@ -5,6 +5,7 @@
 (defalias
   num (tap-next bspc (layer-toggle num))
   nav (tap-next tab (layer-toggle nav))
+  num2 (tap-next ret (layer-toggle num))
 
   met_a (tap-hold-next-release 200 a lmet)
   alt_r (tap-hold-next-release 200 r lalt)
@@ -33,7 +34,7 @@
   tab  q    w    f    p    b    j    l    u    y    '    [     ]    \
   esc @met_a    @alt_r    @ctl_s   @sft_t    g    m    @sft_n    @ctl_e    @alt_i    @met_o    ;          ret
   lsft z    x    c    d    v    k    h    ,    .    /               @num
-  wkup lctl @nav @num           spc            @num sys  rctl  pgdn up   pgup
+  wkup lctl @nav @num           spc            @num2 sys  rctl  pgdn up   pgup
                                                                left down rght
 )
 
